@@ -1,0 +1,13 @@
+- Moving Images (Right box):
+    - sunny
+    - cloudy
+    - drizzle
+    - mist
+    - rainy
+    - snowy
+
+- Globe in centre.
+
+- Forecast on left.
+
+- App background be the one from location.
