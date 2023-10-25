@@ -6,24 +6,50 @@
 }
 
 body{
-    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* TODO: uncomment to set background black */
+    background: url("images/background.jpg") ;
+    /* background-color: burlywood ; */
+    background-size: cover;
+    background-position: center;
+    /* background: #222; */
 }
 
 .card{
+    position: relative;
     width: 90%;
+    height: 100px;
     max-width: 470px;
     /* TODO: change the background of card to be a picture from the city selected */
-    background: linear-gradient(135deg, #00feba, #5b548a);
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255,255,255,.2);
     /* Text color */
     color: #fff;
     margin: 100px auto 0;
+    /* margin-top: 20px;
+    margin-bottom: 50px; */
     border-radius: 20px;
-    padding: 40px 35px;
+    padding: 25px 35px;
     text-align: center;
+    transition: height .6s ease;
+}
+
+.search i {
+    position: absolute;
+    left: 10px;
+    color: black;
+    font-size: 25px;
+    align-items: center;
 }
 
 .search{
+    position: relative;
     width: 100%;
+    height: 55px;
     display: flex;
     /* input field and search button aligned side by side horizontally */
     align-items: center;
@@ -31,9 +57,14 @@ body{
 }
 
 .search input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     bottom: 0;
     outline: 0;
-    background: #ebfffc;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    font-weight: 500;
     color: #555;
     padding: 10px 25px;
     height: 60px;
@@ -41,12 +72,18 @@ body{
     flex: 1;
     margin-right: 16px;
     font-size: 18px;
+    padding: 0 48px 0 42px;
 }
 
 .search button{
+    position: absolute;
+    right: 0;
     bottom: 0;
     outline: 0;
-    background: #ebfffc;
+    background: transparent;
+    /* background: #ebfffc; */
+    /* color: #fff; */
+    border: none;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -97,8 +134,23 @@ body{
     margin-top: -6px;
 }
 
-.weather{
-    display: none;
+.weather, .not-found{
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.weather.active, .not-found.active{
+    visibility: visible;
+}
+
+.weather, .not-found{
+    transform: translateY(-100%);
+}
+
+.weather.active, .not-found.active{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    transition-delay: .6s;
 }
 
 .error{
@@ -107,4 +159,31 @@ body{
     font-size: 14px;
     margin-top: 10px;
     display: none;
+}
+
+.not-found{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 110px;
+}
+
+.not-found img{
+    position: absolute;
+    width: 250px;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 0;
+    margin-right: 100px;
+}
+
+.not-found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 220px;
+    margin-right: 200px;
 }
