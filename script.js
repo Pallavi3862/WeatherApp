@@ -1,6 +1,6 @@
 
-const apiKey = "8b2607ec2a1126e0760e240231da1a2e";
-const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+let apiKey = "8b2607ec2a1126e0760e240231da1a2e";
+let apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 const card = document.querySelector(".card"); 
 const searchBox = document.querySelector(".search input");
@@ -25,6 +25,7 @@ async function getWeather(city_name){
         error.classList.remove("active");
 
         document.querySelector(".city").innerHTML = data.name;
+        document.querySelector(".desc").innerHTML = data.weather.description;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
