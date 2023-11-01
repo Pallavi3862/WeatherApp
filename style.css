@@ -106,9 +106,9 @@ body{
 }
 
 .weather .city{
-    font-size: 45px;
-    font-weight: 400;
-    margin-top: -10px;
+    font-size: 35px;
+    font-weight: 300;
+    margin-top: 10px;
 }
 
 .details{
@@ -120,9 +120,17 @@ body{
 }
 
 .col{
+    margin-left: 60px;
     display: flex;
     align-items: center;
     text-align: left;
+}
+
+.card-body{
+    margin-top: 10px;
+    border-style: solid none solid none;
+    border-bottom: 2px;
+    border-width: 0.01cap;
 }
 
 .col img{
@@ -131,14 +139,15 @@ body{
 }
 
 .humidity, .wind{
-    font-size: 28px;
+    font-size: 15px;
     margin-top: -6px;
+    align-items: center;
 }
 
-.weather, .not-found{
+/* .weather, .not-found{
     overflow: hidden;
     visibility: hidden;
-}
+} */
 
 .weather.active, .not-found.active{
     visibility: visible;
@@ -153,6 +162,20 @@ body{
     transition: transform 1s ease;
     transition-delay: 1.2s;
 } */
+
+.now{
+    text-align: left;
+    /* margin-right: 250px; */
+}
+
+.hour-now{
+    text-align: left;
+    /* margin-right: 200px; */
+}
+
+.time1{
+    text-align: left;
+}
 
 .error{
     text-align: left;

@@ -9,13 +9,9 @@
 <body>
 
 <div class="card">
-    <!-- TODO: get the search bar and button out of the box and at the top of globe in the centre -->
     <div class="search">
-        <!-- <img src="images/location.svg"> -->
         <i class='bx bxs-map'></i>
         <input type="text" placeholder="Enter City Name" spellcheck="false">
-        <!-- TODO: add image for button -->
-        <!-- <i data-lucide="search"></i> -->
         <button><img src="images/search.svg"></button>
     </div>
 
@@ -23,44 +19,60 @@
             <p> Invalid City Name </p>
     </div>
 
+    <!-- Main Current data  -->
     <div class="weather">
-
-        <!-- TODO: add image --> 
         <h2 class="city"> Solan </h1>
         <p class="description">Broken CLouds</p>
         <h1 class="temp"> 22°C </h1>
         
         <div class="details">
             <div class="col">
-                <!-- TODO: add image humidity -->
-                <!-- <i data-lucide="waves"></i> -->
-                <!-- <img src="images/waves.svg"> -->
                 <div>
                     <span> Humidity: <span class="humidity"> </span></span>
                     <span class="|"> | </span>
                     <span> Wind: <span class="wind"> </span></span>
-                    <!-- <p class="humidity"> 50% </p> -->
-                   
                 </div>
             </div>
-            <!-- <div class="col">
-                 TODO: add image wind speed -->
-                <!-- <i data-lucide="wind"></i> 
-                <img src="images/wind.svg">
-                <div>
-                    <p class="wind"> 15 km/h </p>
-                    <p> Wind Speed </p>
-                </div>
-            </div> -->
         </div>    
     </div>
-    
+
+    <!-- Hourly forecast -->
+    <div class="card-body"> 
+      <div class="col-1">
+        <img class-="icon-hour-now" src="" alt="" />
+        <strong class="now"> Now </strong>
+        <strong class="time1"> 1 </strong>
+        <strong class="time2"> 2 </strong>
+        <strong class="time3"> 3 </strong>
+        <strong class="time4"> 4 </strong>
+        <strong class="time5"> 5 </strong>
+      </div>
+
+      <div class="col-2">
+        <img class-="icon-hour1" src="" alt="" />
+        <strong class="hour-now"> 10 </strong>
+        <strong class="hour1"> 20 </strong>
+        <strong class="hour2"> 30 </strong>
+        <strong class="hour3"> 40 </strong>
+        <strong class="hour4"> 50 </strong>
+        <strong class="hour5"> 60 </strong>  
+      </div>
+
+    </div>
+
+    <!-- Daily forecast -->
+    <div class="card-body"> 
+
+    </div>
+
+
     <div class="not-found">
         <div class="box">
-            <img src="images/404.png">
-            <p> Oops! Location not found. </p>
+            <!-- <img src="images/404.png">
+            <p> Oops! Location not found. </p> -->
         </div>
     </div>
+
 </div>
 
 <script src="script.js"> </script>

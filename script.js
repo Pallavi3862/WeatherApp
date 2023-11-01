@@ -28,6 +28,37 @@ async function getWeather(city_name){
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
         document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
         document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+        
+        // // Weather main data
+        // let main = data.current.weather.main;
+        // let description = data.current.weather[0].description;
+        // let temp = Math.round(data.current.temp);
+        // let humidity = data.current.humidity;
+        // let wind = data.current.wind;
+        
+          // Weather hourly data
+        let hourNow = data.hourly[0].temp;
+        let hour1 = data.hourly[1].temp;
+        let hour2 = data.hourly[2].temp;
+        let hour3 = data.hourly[3].temp;
+        let hour4 = data.hourly[4].temp;
+        let hour5 = data.hourly[5].temp;
+
+        document.querySelector(".hour-now").innerHTML = data.hourly[0].temp;;
+        document.querySelector(".hour1").innerHTML = hour1;
+        document.querySelector(".hour2").innerHTML = hour2;
+        document.querySelector(".hour3").innerHTML = hour3;
+        document.querySelector(".hour4").innerHTML = hour4;
+        document.querySelector(".hour5").innerHTML = hour5;
+
+
+        // Weather daily data
+        let tomorrowTemp = Math.round(data.daily[0].temp.day);
+        let datTemp = Math.round(data.daily[1].temp.day);
+        let tomorrowMain = data.daily[0].weather[0].main;
+        let datTempMain = data.daily[1].weather[0].main;
+    
+
 
         if(data.weather[0].main == "Clouds"){
             weatherIcon.src = "images/clouds.png";
