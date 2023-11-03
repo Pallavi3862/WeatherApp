@@ -1,6 +1,10 @@
 
 const apiKey = "8b2607ec2a1126e0760e240231da1a2e";
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const apiURL2 = "api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=";
+const lat = "";
+const lon = "";
+
 
 const card = document.querySelector(".card"); 
 const searchBox = document.querySelector(".search input");
